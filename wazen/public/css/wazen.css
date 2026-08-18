@@ -1,0 +1,1879 @@
+/* =========================================
+   WAZEN BRANDING
+   ========================================= */
+
+.wazen-brand {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    text-decoration: none;
+}
+
+.wazen-brand img {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Wazen logo inside navbar */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================
+   WAZEN LANGUAGE SWITCHER
+   ========================================= */
+
+.wazen-language-switcher {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 32px;
+    min-width: 76px;
+
+    margin: 6px 10px;
+    padding: 0 12px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+
+    background: var(--card-bg);
+    color: var(--text-color);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.wazen-language-switcher:hover {
+    background: var(--fg-hover-color);
+}
+
+.wazen-language-switcher:focus {
+    outline: none;
+}
+
+.wazen-language-switcher:active {
+    transform: translateY(1px);
+}
+
+
+/* =========================================
+   WAZEN DASHBOARD
+   ========================================= */
+
+.wazen-dashboard {
+    padding: 28px;
+    max-width: 1600px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+
+/* ----- Header ----- */
+
+.wazen-dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    padding: 24px 28px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+/* تأثير خلفية متحركة */
+.wazen-dashboard-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+    animation: wazen-header-glow 8s ease-in-out infinite alternate;
+}
+
+@keyframes wazen-header-glow {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-20%, -20%) scale(1.5); }
+}
+
+.wazen-dashboard-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    position: relative;
+    z-index: 1;
+}
+
+.wazen-dashboard-header h1 span {
+    background: linear-gradient(135deg, #a78bfa 0%, #818cf8 50%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.wazen-dashboard-header p {
+    margin: 6px 0 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+.wazen-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ----- Action Button ----- */
+
+.wazen-action-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wazen-action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+}
+
+.wazen-action-btn:active {
+    transform: translateY(0px);
+}
+
+.wazen-action-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* ----- KPI Grid ----- */
+
+.wazen-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* ----- KPI Card ----- */
+
+.wazen-kpi-card {
+    padding: 20px 24px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    min-height: 120px;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* خطوط تلوين جانبية */
+.wazen-kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: 14px 0 0 14px;
+}
+
+.wazen-kpi-card:nth-child(1)::before {
+    background: linear-gradient(180deg, #6366f1, #818cf8);
+}
+.wazen-kpi-card:nth-child(2)::before {
+    background: linear-gradient(180deg, #f59e0b, #fbbf24);
+}
+.wazen-kpi-card:nth-child(3)::before {
+    background: linear-gradient(180deg, #10b981, #34d399);
+}
+.wazen-kpi-card:nth-child(4)::before {
+    background: linear-gradient(180deg, #ef4444, #f87171);
+}
+
+.wazen-kpi-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    border-color: var(--border-color);
+}
+
+.wazen-kpi-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.wazen-kpi-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 4px;
+    letter-spacing: -0.5px;
+}
+
+/* ألوان مميزة للقيم */
+.wazen-kpi-card:nth-child(1) .wazen-kpi-value {
+    color: #6366f1;
+}
+.wazen-kpi-card:nth-child(2) .wazen-kpi-value {
+    color: #f59e0b;
+}
+.wazen-kpi-card:nth-child(3) .wazen-kpi-value {
+    color: #10b981;
+}
+.wazen-kpi-card:nth-child(4) .wazen-kpi-value {
+    color: #ef4444;
+}
+
+.wazen-kpi-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.wazen-kpi-meta .trend-up {
+    color: #10b981;
+}
+
+.wazen-kpi-meta .trend-down {
+    color: #ef4444;
+}
+
+
+/* ----- Main Grid ----- */
+
+.wazen-dashboard-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(320px, 1fr);
+    gap: 20px;
+}
+
+/* ----- Panels ----- */
+
+.wazen-panel {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.wazen-panel:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.wazen-panel-large {
+    min-height: 400px;
+}
+
+.wazen-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-color);
+}
+
+.wazen-panel-header h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wazen-panel-header h3 .badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 20px;
+    background: var(--primary);
+    color: white;
+}
+
+.wazen-panel-header span {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+
+/* ----- Chart Container ----- */
+
+.wazen-chart-placeholder {
+    padding: 20px 24px 16px;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-bg);
+    border-radius: 0 0 14px 14px;
+}
+
+/* =========================================
+   WAZEN SALES CHART
+   ========================================= */
+
+.wazen-sales-chart {
+    width: 100%;
+    height: 280px;
+    padding-top: 10px;
+}
+
+.wazen-chart-bars {
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+    overflow-x: auto;
+    padding: 10px 4px 0;
+}
+
+.wazen-chart-column {
+    flex: 1 0 24px;
+    min-width: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.wazen-chart-column:hover {
+    transform: scaleY(1.02);
+    transform-origin: bottom;
+}
+
+.wazen-chart-value {
+    min-height: 20px;
+    text-align: center;
+    font-size: 9px;
+    font-weight: 600;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.wazen-chart-column:hover .wazen-chart-value {
+    opacity: 1;
+}
+
+.wazen-chart-bar-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    min-height: 180px;
+    position: relative;
+}
+
+.wazen-chart-bar {
+    width: 100%;
+    min-height: 3px;
+    border-radius: 6px 6px 2px 2px;
+    background: linear-gradient(180deg, #6366f1 0%, #818cf8 100%);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+}
+
+/* ألوان متدرجة مختلفة لكل عمود */
+.wazen-chart-column:nth-child(7n+1) .wazen-chart-bar {
+    background: linear-gradient(180deg, #6366f1 0%, #818cf8 100%);
+}
+.wazen-chart-column:nth-child(7n+2) .wazen-chart-bar {
+    background: linear-gradient(180deg, #8b5cf6 0%, #a78bfa 100%);
+}
+.wazen-chart-column:nth-child(7n+3) .wazen-chart-bar {
+    background: linear-gradient(180deg, #ec4899 0%, #f472b6 100%);
+}
+.wazen-chart-column:nth-child(7n+4) .wazen-chart-bar {
+    background: linear-gradient(180deg, #f59e0b 0%, #fbbf24 100%);
+}
+.wazen-chart-column:nth-child(7n+5) .wazen-chart-bar {
+    background: linear-gradient(180deg, #10b981 0%, #34d399 100%);
+}
+.wazen-chart-column:nth-child(7n+6) .wazen-chart-bar {
+    background: linear-gradient(180deg, #3b82f6 0%, #60a5fa 100%);
+}
+.wazen-chart-column:nth-child(7n+0) .wazen-chart-bar {
+    background: linear-gradient(180deg, #8b5cf6 0%, #a78bfa 100%);
+}
+
+.wazen-chart-bar:hover {
+    filter: brightness(1.15);
+    transform: scaleY(1.03);
+    transform-origin: bottom;
+    box-shadow: 0 -4px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* تأثير عمود عند التمرير */
+.wazen-chart-column:hover .wazen-chart-bar {
+    filter: brightness(1.1);
+}
+
+.wazen-chart-label {
+    margin-top: 8px;
+    font-size: 9px;
+    color: var(--text-muted);
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+
+/* ----- Empty Chart ----- */
+
+.wazen-empty-chart {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 14px;
+    gap: 8px;
+}
+
+.wazen-empty-chart svg {
+    opacity: 0.3;
+    width: 48px;
+    height: 48px;
+}
+
+
+/* ----- Quick Actions ----- */
+
+.wazen-quick-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 16px 20px 20px;
+}
+
+.wazen-quick-actions a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    background: var(--bg-color);
+    gap: 8px;
+}
+
+.wazen-quick-actions a:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.wazen-quick-actions a .icon {
+    font-size: 16px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.wazen-quick-actions a:hover .icon {
+    opacity: 1;
+}
+
+
+/* =========================================
+   WAZEN DARK MODE SAFE OVERRIDES
+   ========================================= */
+
+[data-theme="dark"] .wazen-dashboard-header {
+    background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #0f3460 100%);
+}
+
+[data-theme="dark"] .wazen-chart-bar {
+    opacity: 0.85;
+}
+
+[data-theme="dark"] .wazen-kpi-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .wazen-quick-actions a:hover {
+    background: var(--primary);
+    color: white;
+}
+
+[data-theme="dark"] .wazen-action-btn {
+    background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1024px) {
+    .wazen-kpi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .wazen-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wazen-dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px 24px;
+    }
+
+    .wazen-header-actions {
+        width: 100%;
+    }
+
+    .wazen-action-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .wazen-dashboard {
+        padding: 16px;
+    }
+
+    .wazen-dashboard-header {
+        padding: 16px 20px;
+    }
+
+    .wazen-dashboard-header h1 {
+        font-size: 22px;
+    }
+
+    .wazen-kpi-grid {
+        gap: 12px;
+    }
+
+    .wazen-kpi-card {
+        padding: 16px 18px;
+        min-height: 100px;
+    }
+
+    .wazen-kpi-value {
+        font-size: 22px;
+    }
+
+    .wazen-panel-header {
+        padding: 14px 16px;
+    }
+
+    .wazen-chart-placeholder {
+        padding: 12px 16px;
+        min-height: 260px;
+    }
+
+    .wazen-sales-chart {
+        height: 220px;
+    }
+
+    .wazen-chart-bars {
+        gap: 3px;
+    }
+
+    .wazen-chart-column {
+        flex: 1 0 18px;
+        min-width: 18px;
+    }
+
+    .wazen-chart-bar-wrapper {
+        min-height: 140px;
+    }
+
+    .wazen-quick-actions {
+        grid-template-columns: 1fr 1fr;
+        padding: 12px 16px 16px;
+    }
+
+    .wazen-quick-actions a {
+        min-height: 40px;
+        font-size: 12px;
+    }
+
+    .wazen-chart-label {
+        font-size: 7px;
+    }
+
+    .wazen-chart-value {
+        font-size: 7px;
+        min-height: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wazen-dashboard {
+        padding: 10px;
+    }
+
+    .wazen-kpi-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .wazen-kpi-card {
+        padding: 12px 14px;
+        min-height: 80px;
+    }
+
+    .wazen-kpi-value {
+        font-size: 18px;
+    }
+
+    .wazen-kpi-label {
+        font-size: 10px;
+    }
+
+    .wazen-quick-actions {
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+    }
+
+    .wazen-quick-actions a {
+        min-height: 36px;
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+
+    .wazen-chart-column {
+        flex: 1 0 14px;
+        min-width: 14px;
+    }
+
+    .wazen-chart-bar-wrapper {
+        min-height: 100px;
+    }
+
+    .wazen-sales-chart {
+        height: 160px;
+    }
+}
+
+
+
+
+
+/* =========================================
+   WAZEN NEW TRANSACTION - Professional
+   ========================================= */
+
+.wazen-transaction-options {
+    display: grid;
+    gap: 10px;
+    padding: 4px 0;
+}
+
+.wazen-transaction-option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* تأثير الخلفية المتدرجة عند التمرير */
+.wazen-transaction-option::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--primary) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
+}
+
+.wazen-transaction-option:hover::before {
+    opacity: 0.06;
+}
+
+.wazen-transaction-option:hover {
+    border-color: var(--primary);
+    transform: translateX(6px) scale(1.01);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.wazen-transaction-option:active {
+    transform: translateX(3px) scale(0.98);
+}
+
+/* أيقونة كل خيار بلون مميز */
+.wazen-transaction-option:nth-child(1) .wazen-transaction-icon {
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+    color: #4f46e5;
+}
+.wazen-transaction-option:nth-child(2) .wazen-transaction-icon {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    color: #059669;
+}
+.wazen-transaction-option:nth-child(3) .wazen-transaction-icon {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    color: #d97706;
+}
+.wazen-transaction-option:nth-child(4) .wazen-transaction-icon {
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+    color: #7c3aed;
+}
+
+.wazen-transaction-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+/* تأثير دوران الأيقونة عند التمرير */
+.wazen-transaction-option:hover .wazen-transaction-icon {
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.wazen-transaction-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.wazen-transaction-content strong {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+    transition: color 0.2s ease;
+}
+
+.wazen-transaction-option:hover .wazen-transaction-content strong {
+    color: var(--primary);
+}
+
+.wazen-transaction-content small {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.3;
+}
+
+.wazen-transaction-arrow {
+    color: var(--text-muted);
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.wazen-transaction-option:hover .wazen-transaction-arrow {
+    transform: translateX(6px) scale(1.1);
+    color: var(--primary);
+}
+
+/* تأثير نبض عند التمرير */
+.wazen-transaction-option::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--primary), transparent, var(--primary));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+    filter: blur(8px);
+}
+
+.wazen-transaction-option:hover::after {
+    opacity: 0.15;
+}
+
+/* =========================================
+   DARK MODE SUPPORT
+   ========================================= */
+
+[data-theme="dark"] .wazen-transaction-option {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .wazen-transaction-option:hover {
+    border-color: var(--primary);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .wazen-transaction-option:nth-child(1) .wazen-transaction-icon {
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+    color: #818cf8;
+}
+[data-theme="dark"] .wazen-transaction-option:nth-child(2) .wazen-transaction-icon {
+    background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+    color: #34d399;
+}
+[data-theme="dark"] .wazen-transaction-option:nth-child(3) .wazen-transaction-icon {
+    background: linear-gradient(135deg, #78350f 0%, #92400e 100%);
+    color: #fbbf24;
+}
+[data-theme="dark"] .wazen-transaction-option:nth-child(4) .wazen-transaction-icon {
+    background: linear-gradient(135deg, #2e1065 0%, #4c1d95 100%);
+    color: #a78bfa;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 480px) {
+    .wazen-transaction-option {
+        padding: 12px 14px;
+        gap: 10px;
+    }
+
+    .wazen-transaction-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+        border-radius: 9px;
+    }
+
+    .wazen-transaction-content strong {
+        font-size: 13px;
+    }
+
+    .wazen-transaction-content small {
+        font-size: 11px;
+    }
+
+    .wazen-transaction-arrow {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================
+   RECENT TRANSACTIONS - Professional
+   ========================================= */
+
+.wazen-recent-transactions-panel {
+    margin-top: 24px;
+    transition: all 0.3s ease;
+}
+
+.wazen-recent-transactions-panel .wazen-panel-header {
+    padding: 16px 20px;
+}
+
+.wazen-recent-transactions-panel .wazen-panel-header div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.wazen-recent-transactions-panel .wazen-panel-header h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.wazen-recent-transactions-panel .wazen-panel-header span {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* View All Button */
+.wazen-view-all {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    background: var(--fg-color);
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.wazen-view-all:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateX(2px);
+    text-decoration: none;
+}
+
+/* Transactions Container */
+.wazen-recent-transactions {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 0;
+}
+
+/* Transaction Row */
+.wazen-transaction-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+    text-decoration: none !important;
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    border-radius: 0;
+}
+
+.wazen-transaction-row:last-child {
+    border-bottom: none;
+}
+
+.wazen-transaction-row::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--primary);
+    opacity: 0;
+    border-radius: 0 3px 3px 0;
+    transition: opacity 0.25s ease;
+}
+
+.wazen-transaction-row:hover {
+    background: var(--fg-hover-color);
+    transform: translateX(4px);
+    border-radius: 8px;
+    margin: 0 4px;
+}
+
+.wazen-transaction-row:hover::before {
+    opacity: 1;
+}
+
+/* Type Icon */
+.wazen-transaction-type-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--fg-color);
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+/* ألوان مميزة للـ Icon حسب النوع */
+.wazen-transaction-row .wazen-transaction-type-icon:has(+ .wazen-transaction-main .wazen-transaction-title:contains("SINV")) {
+    background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+}
+
+.wazen-transaction-row:nth-child(1) .wazen-transaction-type-icon {
+    background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+}
+.wazen-transaction-row:nth-child(2) .wazen-transaction-type-icon {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+}
+.wazen-transaction-row:nth-child(3) .wazen-transaction-type-icon {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+}
+.wazen-transaction-row:nth-child(4) .wazen-transaction-type-icon {
+    background: linear-gradient(135deg, #fce7f3, #fbcfe8);
+}
+.wazen-transaction-row:nth-child(5) .wazen-transaction-type-icon {
+    background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+}
+.wazen-transaction-row:nth-child(6) .wazen-transaction-type-icon {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+}
+.wazen-transaction-row:nth-child(7) .wazen-transaction-type-icon {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+}
+.wazen-transaction-row:nth-child(8) .wazen-transaction-type-icon {
+    background: linear-gradient(135deg, #fce7f3, #fbcfe8);
+}
+
+.wazen-transaction-row:hover .wazen-transaction-type-icon {
+    transform: scale(1.05) rotate(-3deg);
+}
+
+/* Transaction Main */
+.wazen-transaction-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.wazen-transaction-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.wazen-transaction-row:hover .wazen-transaction-title {
+    color: var(--primary);
+}
+
+.wazen-transaction-meta {
+    font-size: 11px;
+    color: var(--text-muted);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.wazen-transaction-meta .dot {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    opacity: 0.4;
+}
+
+/* Transaction Amount */
+.wazen-transaction-amount {
+    min-width: 110px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-color);
+    letter-spacing: -0.3px;
+    padding: 0 4px;
+}
+
+.wazen-transaction-amount .currency {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-left: 2px;
+}
+
+/* Transaction Status */
+.wazen-transaction-status {
+    min-width: 82px;
+    text-align: center;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    transition: all 0.25s ease;
+}
+
+.wazen-transaction-status.submitted {
+    background: rgba(34, 197, 94, 0.12);
+    color: #16a34a;
+}
+
+.wazen-transaction-status.submitted::before {
+    content: '● ';
+    font-size: 8px;
+}
+
+.wazen-transaction-status.draft {
+    background: rgba(234, 179, 8, 0.12);
+    color: #ca8a04;
+}
+
+.wazen-transaction-status.draft::before {
+    content: '● ';
+    font-size: 8px;
+}
+
+.wazen-transaction-status.cancelled {
+    background: rgba(239, 68, 68, 0.12);
+    color: #dc2626;
+}
+
+.wazen-transaction-status.cancelled::before {
+    content: '● ';
+    font-size: 8px;
+}
+
+.wazen-transaction-status.unknown {
+    background: rgba(148, 163, 184, 0.12);
+    color: #64748b;
+}
+
+.wazen-transaction-status.unknown::before {
+    content: '● ';
+    font-size: 8px;
+}
+
+/* Transaction Arrow */
+.wazen-transaction-arrow {
+    color: var(--text-muted);
+    font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    flex-shrink: 0;
+}
+
+.wazen-transaction-row:hover .wazen-transaction-arrow {
+    transform: translateX(4px) scale(1.1);
+    color: var(--primary);
+}
+
+/* Empty State */
+.wazen-empty-state {
+    padding: 48px 20px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.wazen-empty-state .empty-icon {
+    font-size: 32px;
+    opacity: 0.4;
+}
+
+.wazen-empty-state .empty-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.wazen-empty-state .empty-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* Loading State */
+.wazen-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 32px 20px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.wazen-spinner {
+    width: 24px;
+    height: 24px;
+    border: 2.5px solid var(--border-color);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: wazen-spin 0.7s linear infinite;
+}
+
+@keyframes wazen-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* =========================================
+   DARK MODE SUPPORT
+   ========================================= */
+
+[data-theme="dark"] .wazen-transaction-row {
+    border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .wazen-transaction-row:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .wazen-transaction-type-icon {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .wazen-view-all:hover {
+    background: var(--primary);
+    color: white;
+}
+
+[data-theme="dark"] .wazen-transaction-status.submitted {
+    background: rgba(34, 197, 94, 0.2);
+    color: #4ade80;
+}
+
+[data-theme="dark"] .wazen-transaction-status.draft {
+    background: rgba(234, 179, 8, 0.2);
+    color: #fbbf24;
+}
+
+[data-theme="dark"] .wazen-transaction-status.cancelled {
+    background: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1024px) {
+    .wazen-transaction-row {
+        padding: 10px 12px;
+        gap: 12px;
+    }
+
+    .wazen-transaction-amount {
+        min-width: 90px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wazen-recent-transactions-panel {
+        margin-top: 16px;
+    }
+
+    .wazen-recent-transactions-panel .wazen-panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 14px 16px;
+    }
+
+    .wazen-recent-transactions-panel .wazen-panel-header div {
+        flex-wrap: wrap;
+    }
+
+    .wazen-transaction-row {
+        padding: 10px 12px;
+        gap: 10px;
+    }
+
+    .wazen-transaction-type-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 15px;
+    }
+
+    .wazen-transaction-title {
+        font-size: 12px;
+    }
+
+    .wazen-transaction-meta {
+        font-size: 10px;
+        max-width: 150px;
+    }
+
+    .wazen-transaction-amount {
+        min-width: 70px;
+        font-size: 12px;
+    }
+
+    .wazen-transaction-status {
+        display: none;
+    }
+
+    .wazen-transaction-arrow {
+        display: none;
+    }
+
+    .wazen-transaction-row:hover {
+        transform: translateX(2px);
+    }
+}
+
+@media (max-width: 480px) {
+    .wazen-recent-transactions-panel .wazen-panel-header h3 {
+        font-size: 13px;
+    }
+
+    .wazen-view-all {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    .wazen-transaction-row {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+
+    .wazen-transaction-type-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+        border-radius: 6px;
+    }
+
+    .wazen-transaction-title {
+        font-size: 11px;
+    }
+
+    .wazen-transaction-meta {
+        font-size: 9px;
+        max-width: 120px;
+    }
+
+    .wazen-transaction-amount {
+        min-width: 60px;
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================
+   WAZEN LOW STOCK - Professional
+   ========================================= */
+
+.wazen-low-stock-panel {
+    margin-top: 24px;
+    transition: all 0.3s ease;
+}
+
+.wazen-low-stock-panel .wazen-panel-header {
+    padding: 16px 20px;
+}
+
+.wazen-low-stock-panel .wazen-panel-header div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.wazen-low-stock-panel .wazen-panel-header h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.wazen-low-stock-panel .wazen-panel-header h3 .badge-critical {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 20px;
+    background: #ef4444;
+    color: white;
+    margin-left: 6px;
+}
+
+.wazen-low-stock-panel .wazen-panel-header span {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* View All Button - matching recent transactions */
+.wazen-view-all {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    background: var(--fg-color);
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.wazen-view-all:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateX(2px);
+    text-decoration: none;
+}
+
+/* Container */
+.wazen-low-stock {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 4px 12px;
+}
+
+/* Stock Row */
+.wazen-stock-row {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(160px, 1.4fr) minmax(140px, 1fr) minmax(90px, 0.7fr) minmax(180px, 1.2fr) 90px;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 18px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* خط جانبي ملون حسب الحالة */
+.wazen-stock-row::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 4px;
+    border-radius: 0 4px 4px 0;
+    transition: all 0.3s ease;
+}
+
+.wazen-stock-row.critical::before {
+    background: #ef4444;
+}
+
+.wazen-stock-row.low::before {
+    background: #f59e0b;
+}
+
+.wazen-stock-row.good::before {
+    background: #22c55e;
+}
+
+.wazen-stock-row:hover {
+    background: var(--fg-hover-color);
+    border-color: var(--border-color);
+    transform: translateX(4px);
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.wazen-stock-row:hover::before {
+    top: 4px;
+    bottom: 4px;
+    width: 5px;
+}
+
+/* Item Info */
+.wazen-stock-info {
+    min-width: 0;
+}
+
+.wazen-stock-code {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.2s ease;
+}
+
+.wazen-stock-row:hover .wazen-stock-code {
+    color: var(--primary);
+}
+
+.wazen-stock-name {
+    margin-top: 3px;
+    font-size: 12px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Warehouse */
+.wazen-stock-warehouse {
+    font-size: 12px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.wazen-stock-warehouse::before {
+    content: '🏪';
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+/* Quantity */
+.wazen-stock-qty {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.wazen-stock-qty-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.wazen-stock-qty-value.critical {
+    color: #ef4444;
+}
+
+.wazen-stock-qty-value.low {
+    color: #f59e0b;
+}
+
+.wazen-stock-qty-value.good {
+    color: #22c55e;
+}
+
+.wazen-stock-uom {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+/* Progress Bar */
+.wazen-stock-progress {
+    min-width: 0;
+}
+
+.wazen-stock-progress-bar {
+    width: 100%;
+    height: 8px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--border-color);
+    position: relative;
+}
+
+.wazen-stock-progress-fill {
+    height: 100%;
+    border-radius: inherit;
+    transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+}
+
+/* تأثير تموج على شريط التقدم */
+.wazen-stock-progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.wazen-stock-progress-label {
+    margin-top: 6px;
+    font-size: 11px;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+}
+
+.wazen-stock-progress-label .reorder-label {
+    color: var(--text-muted);
+}
+
+.wazen-stock-progress-label .reorder-value {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Status Badge */
+.wazen-stock-status {
+    font-size: 11px;
+    font-weight: 700;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    justify-self: end;
+    transition: all 0.3s ease;
+}
+
+.wazen-stock-status.critical {
+    background: rgba(239, 68, 68, 0.12);
+    color: #ef4444;
+}
+
+.wazen-stock-status.low {
+    background: rgba(245, 158, 11, 0.12);
+    color: #f59e0b;
+}
+
+.wazen-stock-status.good {
+    background: rgba(34, 197, 94, 0.12);
+    color: #22c55e;
+}
+
+/* =========================================
+   DARK MODE SUPPORT
+   ========================================= */
+
+[data-theme="dark"] .wazen-stock-row {
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .wazen-stock-row:hover {
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .wazen-stock-status.critical {
+    background: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+}
+
+[data-theme="dark"] .wazen-stock-status.low {
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+}
+
+[data-theme="dark"] .wazen-stock-status.good {
+    background: rgba(34, 197, 94, 0.2);
+    color: #4ade80;
+}
+
+[data-theme="dark"] .wazen-stock-qty-value.critical {
+    color: #f87171;
+}
+
+[data-theme="dark"] .wazen-stock-qty-value.low {
+    color: #fbbf24;
+}
+
+[data-theme="dark"] .wazen-stock-qty-value.good {
+    color: #4ade80;
+}
+
+[data-theme="dark"] .wazen-view-all:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1000px) {
+    .wazen-stock-row {
+        grid-template-columns: 1.5fr 1fr 0.7fr;
+        gap: 12px;
+        padding: 12px 16px;
+    }
+
+    .wazen-stock-progress {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+
+    .wazen-stock-status {
+        grid-column: 3;
+        grid-row: 2;
+        text-align: right;
+        justify-self: end;
+        align-self: center;
+    }
+
+    .wazen-stock-qty-value {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wazen-low-stock-panel {
+        margin-top: 16px;
+    }
+
+    .wazen-low-stock-panel .wazen-panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 14px 16px;
+    }
+
+    .wazen-low-stock-panel .wazen-panel-header div {
+        flex-wrap: wrap;
+    }
+
+    .wazen-stock-row {
+        grid-template-columns: 1fr auto;
+        gap: 8px;
+        padding: 12px 14px;
+        border-radius: 8px;
+    }
+
+    .wazen-stock-info {
+        grid-column: 1;
+    }
+
+    .wazen-stock-code {
+        font-size: 12px;
+    }
+
+    .wazen-stock-name {
+        font-size: 11px;
+    }
+
+    .wazen-stock-warehouse {
+        grid-column: 1;
+        font-size: 11px;
+    }
+
+    .wazen-stock-warehouse::before {
+        display: none;
+    }
+
+    .wazen-stock-qty {
+        grid-column: 2;
+        grid-row: 1 / 3;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2px;
+    }
+
+    .wazen-stock-qty-value {
+        font-size: 16px;
+    }
+
+    .wazen-stock-uom {
+        font-size: 10px;
+    }
+
+    .wazen-stock-progress {
+        grid-column: 1 / 3;
+        grid-row: auto;
+    }
+
+    .wazen-stock-progress-bar {
+        height: 6px;
+    }
+
+    .wazen-stock-progress-label {
+        font-size: 10px;
+    }
+
+    .wazen-stock-status {
+        grid-column: 1 / 3;
+        grid-row: auto;
+        text-align: left;
+        justify-self: start;
+        font-size: 10px;
+        padding: 3px 10px;
+    }
+
+    .wazen-stock-row::before {
+        top: 4px;
+        bottom: 4px;
+        width: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wazen-low-stock-panel .wazen-panel-header h3 {
+        font-size: 13px;
+    }
+
+    .wazen-view-all {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    .wazen-stock-row {
+        padding: 10px 12px;
+        gap: 6px;
+    }
+
+    .wazen-stock-code {
+        font-size: 11px;
+    }
+
+    .wazen-stock-name {
+        font-size: 10px;
+    }
+
+    .wazen-stock-qty-value {
+        font-size: 14px;
+    }
+
+    .wazen-stock-progress-label {
+        font-size: 9px;
+        flex-direction: column;
+        gap: 2px;
+    }
+}
