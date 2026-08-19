@@ -1,3 +1,4 @@
+tags: ghcr.io/yahyaahmed20/wazen-business-management:latest
 name: Build Wazen ERPNext Image
 
 on:
