@@ -1,4 +1,3 @@
-tags: ghcr.io/yahyaahmed20/wazen-business-management:latest
 name: Build Wazen ERPNext Image
 
 on:
@@ -56,7 +55,7 @@ jobs:
           context: frappe_docker
           file: frappe_docker/images/layered/Containerfile
           push: true
-          tags: ghcr.io/${{ github.repository }}:latest
+          tags: ghcr.io/yahyaahmed20/wazen-business-management:latest
           build-args: |
             FRAPPE_BRANCH=version-16
           secrets: |
