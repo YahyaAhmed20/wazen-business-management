@@ -260,21 +260,20 @@ app_license = "mit"
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
-
 # ============================================================
 # WAZEN BRAND IDENTITY
 # ============================================================
 
 app_logo_url = "/assets/wazen/images/wazen-navbar.png"
 
-app_home = "/app/home"
+app_home = "/app/wazen_home"
 
 add_to_apps_screen = [
     {
         "name": "wazen",
         "logo": "/assets/wazen/images/wazen-icon-512.png",
         "title": "Wazen",
-        "route": "/app/home",
+        "route": "/app/wazen_home",
     }
 ]
 
@@ -282,7 +281,7 @@ app_include_css = "/assets/wazen/css/wazen.css"
 app_include_js = "/assets/wazen/js/wazen.js"
 
 brand_html = """
-<a href="/app/home" class="wazen-brand">
+<a href="/app/wazen_home" class="wazen-brand">
     <img src="/assets/wazen/images/wazen-navbar.png" alt="Wazen">
 </a>
 """
